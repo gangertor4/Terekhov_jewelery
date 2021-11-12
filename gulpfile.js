@@ -18,7 +18,8 @@ const stylesMin = () => {
 const server = (done) => {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./",
+      index: "main.html"
     },
     cors: true,
     notify: false,
@@ -32,10 +33,10 @@ const reload = done => {
   done();
 }
 
-const html = () => {
-  return gulp.src("*.html")
-    .pipe(gulp.dest("./"));
-}
+// const html = () => {
+//   return gulp.src("*.html")
+//     .pipe(gulp.dest("./"));
+// }
 
 const concatJsript = () => {
   return gulp.src("js/modules/*.js")
@@ -46,9 +47,9 @@ const concatJsript = () => {
 exports.concatJsript = concatJsript;
 
 const concatJsvendor = () => {
-  return gulp.src("source/js/vendor/*.js")
+  return gulp.src("js/vendor/*.js")
   .pipe(concat("vendor.js"))
-  .pipe(gulp.dest("build/js"));
+  .pipe(gulp.dest("js"));
 }
 
 exports.concatJsvendor = concatJsvendor;
@@ -56,7 +57,7 @@ exports.concatJsvendor = concatJsvendor;
 const watcher = () => {
   gulp.watch("sass/**/*.scss", gulp.series(stylesMin));
   gulp.watch("js/**/*.js", gulp.series(concatJsript, concatJsvendor, reload));
-  gulp.watch("*.html", gulp.series(html, reload));
+  gulp.watch("*.html").on("change", browserSync.reload);
 }
 
 exports.default = gulp.series(
