@@ -41,7 +41,7 @@ const reload = done => {
 const concatJsript = () => {
   return gulp.src("js/modules/*.js")
     .pipe(concat("script.js"))
-    .pipe(gulp.dest("js"));
+    .pipe(gulp.dest("js"))
 }
 
 exports.concatJsript = concatJsript;
@@ -49,14 +49,14 @@ exports.concatJsript = concatJsript;
 const concatJsvendor = () => {
   return gulp.src("js/vendor/*.js")
   .pipe(concat("vendor.js"))
-  .pipe(gulp.dest("js"));
+  .pipe(gulp.dest("js"))
 }
 
 exports.concatJsvendor = concatJsvendor;
 
 const watcher = () => {
   gulp.watch("sass/**/*.scss", gulp.series(stylesMin));
-  gulp.watch("js/**/*.js", gulp.series(concatJsript, concatJsvendor, reload));
+  gulp.watch("js/**/*.js", gulp.series(concatJsript, reload));
   gulp.watch("*.html").on("change", browserSync.reload);
 }
 
