@@ -1,0 +1,51 @@
+.main-slogan {
+  margin-top: 19px;
+  min-height: 463px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/intro-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/intro-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    background-image: url("../img/intro-tablet.jpg");
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/intro-tablet@2x.jpg");
+    }
+  }
+}
+
+.main-slogan span {
+  font-family: $custom-font-garamond;
+  font-size: 45px;
+  font-weight: 700;
+  color: $basic-white;
+
+  @media (max-width: $mobile-width) {
+    font-size: 38px;
+  }
+}
+
+.main-slogan p {
+  font-family: $custom-font-garamond;
+  font-size: 38px;
+  font-style: italic;
+  font-weight: 400;
+  color: $basic-white;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    font-size: 34px;
+  }
+}

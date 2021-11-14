@@ -24,7 +24,7 @@
   font-weight: 500;
   text-decoration: none;
   color: $basic-black;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid $basic-white;
   transition: border-color 400ms;
 
   @media (max-width: $tablet-width) {

@@ -5,4 +5,4 @@ menuBtn.addEventListener('click', (evt) => {
   evt.preventDefault();
   header.classList.toggle('header--closed');
   header.classList.toggle('header--opened');
-})
+});
