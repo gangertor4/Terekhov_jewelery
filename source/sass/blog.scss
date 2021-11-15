@@ -1,0 +1,249 @@
+.blog {
+  padding-left: 98px;
+  padding-right: 98px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.blog p {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.blog__wrapper {
+  max-width: max-content;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 570px));
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    "care trend"
+    "crystal trend";
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    max-width: 678px;
+    gap: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 316px;
+    gap: 296px;
+  }
+}
+
+.blog__post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 285px;
+  height: 300px;
+  padding-top: 71px;
+  padding-bottom: 81px;
+  box-sizing: border-box;
+  background-color: $blog-bg;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 339px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    height: 256px;
+    padding-top: 49px;
+    padding-bottom: 59px;
+  }
+}
+
+.blog__post-date {
+  font-family: $custom-font-poppins;
+  font-size: 14px;
+  font-weight: 500;
+  color: $basic-grey;
+  margin-bottom: 25px;
+}
+
+.blog__post h3 {
+  font-family: $custom-font-garamond;
+  font-size: 26px;
+  font-weight: 600;
+  color: #000000;
+  width: 163px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.blog__post-link {
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: $basic-black;
+  text-decoration: none;
+  width: fit-content;
+  border-bottom: 1px solid $basic-brown;
+}
+
+.blog__post--care {
+  grid-area: care;
+  justify-self: end;
+
+  &::before {
+    width: 285px;
+    height: 300px;
+    background-image: url("../img/jess-harper-sunday-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    z-index: -10;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/jess-harper-sunday-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    align-self: end;
+    position: relative;
+
+    &::before {
+      width: 339px;
+      left: -100%;
+      background-image: url("../img/jess-harper-sunday-tablet.jpg");
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/jess-harper-sunday-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    align-self: center;
+
+    &::before {
+      width: 290px;
+      height: 256px;
+      left: 0;
+      top: -100%;
+    }
+  }
+}
+
+.blog__post--crystal {
+  grid-area: crystal;
+
+  &::before {
+    width: 285px;
+    height: 300px;
+    background-image: url("../img/alex-holyoake-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 51.5%;
+    bottom: 0;
+    z-index: -10;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/alex-holyoake-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    align-self: start;
+    position: relative;
+
+    &::before {
+      width: 339px;
+      right: -100%;
+      background-image: url("../img/alex-holyoake-tablet.jpg");
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/alex-holyoake-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    align-self: center;
+
+    &::before {
+      width: 290px;
+      height: 256px;
+      left: 0;
+      top: -100%;
+    }
+  }
+}
+
+.blog__post--trend {
+  grid-area: trend;
+  justify-self: end;
+  align-self: end;
+  position: relative;
+
+  &::before {
+    width: 570px;
+    height: 630px;
+    background-image: url("../img/alve-odonnell-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    z-index: -15;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/alve-odonnell-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    align-self: end;
+
+    &::before {
+      width: 339px;
+      height: 300px;
+      left: -100%;
+      background-image: url("../img/alve-odonnell-tablet.jpg");
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/alve-odonnell-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    align-self: center;
+
+    &::before {
+      width: 290px;
+      height: 256px;
+      left: 0;
+      top: -100%;
+    }
+  }
+}

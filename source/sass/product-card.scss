@@ -1,0 +1,23 @@
+.product-card {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $basic-black;
+  font-family: $custom-font-poppins;
+}
+
+.product-card p {
+  margin: 0;
+  margin-top: 19px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-card span {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -32,8 +32,7 @@ exports.styles = styles;
 const server = (done) => {
   browserSync.init({
     server: {
-      baseDir: "build",
-      index: "main.html"
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -87,6 +86,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
       "source/fonts/*.{woff2,woff}",
+      "source/*/*.js.map",
     ], {
       base: "source"
     })
@@ -96,6 +96,20 @@ const copy = (done) => {
 
 exports.copy = copy;
 
+const copyMap = (done) => {
+  gulp.src([
+      "source/**/*.map",
+    ], {
+      base: "source"
+    })
+    .pipe(rename({
+      dirname: "",
+      })) 
+    .pipe(gulp.dest("build/js"))
+  done();
+}
+
+exports.copyMap = copyMap;
 
 const concatJsript = () => {
   return gulp.src("source/js/modules/*.js")
@@ -154,6 +168,7 @@ const build = gulp.series(
     stylesMin,
     html,
     copy,
+    copyMap,
     concatJsript,
     concatJsvendor,
   ),
@@ -171,6 +186,7 @@ exports.default = gulp.series(
     stylesMin,
     html,
     copy,
+    copyMap,
     concatJsript,
     concatJsvendor,
   ),
