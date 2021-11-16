@@ -1,0 +1,178 @@
+.login {
+  padding-top: 198px;
+  width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $blog-bg;
+  background-image: url("../img/sweet-ice-cream-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/sweet-ice-cream-photography@2x.jpg");
+  }
+
+  position: relative;
+
+  &--popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    padding-top: 130px;
+  }
+}
+
+.login h2 {
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+  }
+}
+
+
+.login__back {
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $basic-black;
+  border-bottom: 1px solid transparent;
+  transition: border-color 400ms;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.login__back:hover {
+  border-color: $basic-brown;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 45px;
+
+  @media (max-width: $mobile-width) {
+    width: 240px;
+  }
+}
+
+.login input {
+  width: 340px;
+  height: 30px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $basic-black;
+  background-color: transparent;
+  color: $basic-black;
+
+  @media (max-width: $mobile-width) {
+    width: 240px;
+  }
+}
+
+.login input[type=email] {
+  margin-bottom: 34px;
+}
+
+.login input::placeholder {
+  font-family: $custom-font-poppins;
+  font-size: 14px;
+  font-weight: 400;
+  color: $basic-grey;
+}
+
+.login__link {
+  text-decoration: none;
+  font-family: $custom-font-poppins;
+  font-size: 12px;
+  font-weight: 500;
+  color: $basic-grey;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.login__btn {
+  width: 100%;
+  min-height: 68px;
+  outline: none;
+  border: none;
+  background-color: $basic-brown;
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: $basic-white;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.login__btn:hover {
+  background-color: #86624e;
+}
+
+.login__reg {
+  width: 229px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $custom-font-poppins;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.login__reg p {
+  color: $basic-grey;
+  margin: 0;
+}
+
+.login__reg a {
+  text-decoration: none;
+  color: $basic-black;
+}
+
+.login__exit {
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  top: 20px;
+  right: 20px;
+}
+
+.login__exit:before,
+.login__exit:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 2px;
+  background-color: $basic-black;
+  top: 0;
+}
+
+.login__exit:before {
+  transform: rotate(45deg);
+}
+
+.login__exit:after {
+  transform: rotate(-45deg);
+}

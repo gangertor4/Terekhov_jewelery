@@ -1,0 +1,48 @@
+.cat-slogan {
+  margin-top: 19px;
+  min-height: 261px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/catalog-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/catalog-header@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    background-image: url("../img/catalog-header-tablet.jpg");
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/catalog-header-tablet@2x.jpg");
+    }
+  }
+}
+
+.cat-slogan span {
+  font-family: $custom-font-garamond;
+  font-size: 34px;
+  font-weight: 700;
+  color: $basic-white;
+  margin-bottom: 20px;
+}
+
+.cat-slogan p {
+  font-family: $custom-font-garamond;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  color: $basic-white;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    width: 247px;
+  }
+}

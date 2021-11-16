@@ -1,15 +1,18 @@
 .blog {
   padding-left: 98px;
   padding-right: 98px;
+  margin-top: 130px;
 
   @media (max-width: $tablet-width) {
     padding-left: 45px;
     padding-right: 45px;
+    margin-top: 80px;
   }
 
   @media (max-width: $mobile-width) {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 70px;
   }
 }
 
@@ -31,6 +34,7 @@
     "care trend"
     "crystal trend";
   position: relative;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     display: flex;
@@ -40,7 +44,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: 316px;
+    padding-top: 316px;
     gap: 296px;
   }
 }
@@ -129,6 +133,7 @@
 
     &::before {
       width: 339px;
+      height: 300px;
       left: -100%;
       background-image: url("../img/jess-harper-sunday-tablet.jpg");
 
@@ -144,7 +149,6 @@
 
     &::before {
       width: 290px;
-      height: 256px;
       left: 0;
       top: -100%;
     }
@@ -202,7 +206,6 @@
   grid-area: trend;
   justify-self: end;
   align-self: end;
-  position: relative;
 
   &::before {
     width: 570px;
@@ -210,7 +213,8 @@
     background-image: url("../img/alve-odonnell-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    right: 0;
+    // right: 0;
+    left: 52%;
     bottom: 0;
     z-index: -15;
 
@@ -222,6 +226,7 @@
 
   @media (max-width: $tablet-width) {
     align-self: end;
+    position: relative;
 
     &::before {
       width: 339px;

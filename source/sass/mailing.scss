@@ -1,0 +1,72 @@
+.mailing h2 {
+  color: $basic-white;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.mailing p {
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 400;
+  color: $basic-grey;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.mailing__form {
+  border-bottom: 1px solid $basic-white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mailing input {
+  width: 397px;
+  height: 42px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: $basic-white;
+
+  @media (max-width: $mobile-width) {
+    width: 58%;
+  }
+}
+
+.mailing input::placeholder {
+  font-family: $custom-font-poppins;
+  font-size: 14px;
+  font-weight: 400;
+  color: $basic-grey;
+}
+
+.mailing__btn {
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: $basic-white;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-right: 41px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 9px;
+    background-image: url("../img/arrow-sign.svg");
+    background-size: cover;
+    right: 0;
+    top: 18px;
+  }
+}

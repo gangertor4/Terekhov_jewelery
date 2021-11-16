@@ -8,10 +8,26 @@
   z-index: 1;
   max-width: 1170px;
   height: 418px;
+
+  @media (max-width: 1169px) {
+    width: 870px;
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 468px;
+    width: 678px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    height: 273px;
+  }
 }
+
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
 }
+
 .swiper-wrapper {
   position: relative;
   width: 100%;
@@ -20,28 +36,37 @@
   display: flex;
   justify-content: space-between;
   transition-property: transform;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
+
 .swiper-android .swiper-slide,
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
 }
+
 .swiper-pointer-events {
   touch-action: pan-y;
   &.swiper-vertical {
     touch-action: pan-x;
   }
 }
+
 .swiper-slide {
   flex-shrink: 0;
   width: 270px;
   height: 100%;
   position: relative;
   transition-property: transform;
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+  }
 }
+
 .swiper-slide-invisible-blank {
   visibility: hidden;
 }
+
 /* Auto Height */
 .swiper-autoheight {
   &,
@@ -70,9 +95,12 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   width: 100%;
+  font-family: $custom-font-poppins;
+  font-size: 16px;
+  font-weight: 500;
 }
 /* Bullets */
 .swiper-pagination-bullet {
@@ -80,7 +108,7 @@
   font-size: 16px;
   font-weight: 500;
 	border-radius: 0;
-  padding: 7.5px;
+  padding: 7.5px 7.5px 0 7.5px;
 	width: auto;
 	height: 30px;
 	text-align: center;
@@ -97,15 +125,23 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 0;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  top: -95px;
+  margin: 0 auto;
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 100;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
+
+  @media (max-width: $tablet-width) {
+    top: -82px
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .swiper-button-prev,
@@ -124,7 +160,7 @@
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 10px;
+  right: 0;
   left: auto;
 }
 .swiper-button-next:after,
