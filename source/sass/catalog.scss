@@ -1,0 +1,15 @@
+.catalog {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 0 20px 0 20px;
+  column-gap: 50px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    margin-top: 50px;
+    row-gap: 50px;
+    padding: 0;
+  }
+}

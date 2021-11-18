@@ -23,16 +23,8 @@
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 8px;
     top: 52px;
     right: 50px;
-    background-image: url("../img/arrow-accord.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: rotate(180deg);
   }
 
   @media (max-width: $tablet-width) {
@@ -87,10 +79,3 @@
   }
 }
 
-.faq__item--closed::after {
-  transform: rotate(360deg);
-}
-
-.faq__item--closed p {
-  display: none;
-}

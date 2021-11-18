@@ -69,52 +69,66 @@
     </section>
     <section class="catalog">
       <article class="cat-filter">
+        <a href="#" class="cat-filter__btn-open">Filter</a>
         <form action="">
-          <div class="cat-filter__product">
+          <button type="button" class="cat-filter__btn-close"></button>
+          <fieldset class="cat-filter__group cat-filter__group--product accordion">
             <h3>Product</h3>
-            <label for="">
-              <input type="checkbox" name="" id="">Necklaces
+            <label for="necklace">
+              <input class="visually-hidden" type="checkbox" name="" id="necklace" checked>
+              <span>Necklaces</span>
             </label>
-            <label for="">
-              <input type="checkbox" name="" id="">Chokers
+            <label for="choker">
+              <input class="visually-hidden" type="checkbox" name="" id="choker" checked>
+              <span>Chokers</span>
             </label>
-            <label for="">
-              <input type="checkbox" name="" id="">Rings
+            <label for="rings"">
+              <input class="visually-hidden" type="checkbox" name="" id="rings">
+              <span>Rings</span>
             </label>
-            <label for="">
-              <input type="checkbox" name="" id="">Earrings
+            <label for="earrings">
+              <input class="visually-hidden" type="checkbox" name="" id="earrings" checked>
+              <span>Earrings</span>
             </label>
-          </div>
-          <div class="cat-filter__material">
+          </fieldset>
+          <fieldset class="cat-filter__group cat-filter__group--material accordion">
             <h3>Material</h3>
-            <label for="">
-              <input type="checkbox" name="" id="">Gold
+            <label for="gold">
+              <input class="visually-hidden" type="checkbox" name="" id="gold" checked>
+              <span>Gold</span>
             </label>
-            <label for="">
-              <input type="checkbox" name="" id="">Silver
+            <label for="silver"">
+              <input class="visually-hidden" type="checkbox" name="" id="silver">
+              <span>Silver</span>
             </label>
-          </div>
-          <div class="cat-filter__collection">
+          </fieldset>
+          <fieldset class="cat-filter__group cat-filter__group--collection accordion">
             <h3>Collection</h3>
-            <label for="">
-              <input type="checkbox" name="" id="">Pink flamingo
+            <label for="flamingo"">
+              <input class="visually-hidden" type="checkbox" name="" id="flamingo">
+              <span>Pink flamingo</span>
             </label>
-            <label for="">
-              <input type="checkbox" name="" id="">Dreams
+            <label for="dream">
+              <input class="visually-hidden" type="checkbox" name="" id="dream" checked>
+              <span>Dreams</span>
             </label>
-          </div>
-          <div class="cat-filter__price">
+          </fieldset>
+          <fieldset class="cat-filter__group cat-filter__group--price accordion">
             <h3>Price</h3>
             <div class="cat-filter__price-change"></div>
-            <p>$ 55</p>
-            <p>$ 155</p>
-          </div>
+            <div class="cat-filter__price-numbers">
+              <p>$ 55</p>
+              <p>$ 155</p>
+            </div>
+          </fieldset>
+          <button type="button" class="cat-filter__btn cat-filter__btn--submit">Apply</button>
+          <button type="reset" class="cat-filter__btn cat-filter__btn--reset">Clear All</button>
         </form>
       </article>
       <article class="cat-goods">
         <ul class="cat-goods__list">
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/double-pearl-earrings.jpg" srcset="img/double-pearl-earrings@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -123,7 +137,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/black-choker-gold-bead.jpg" srcset="img/black-choker-gold-bead@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -132,7 +146,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/gold-layered-necklace.jpg" srcset="img/gold-layered-necklace@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -141,7 +155,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/blue-gemstone-pendant.jpg" srcset="img/blue-gemstone-pendant@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -150,7 +164,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/boho-earrings.jpg" srcset="img/boho-earrings@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -159,7 +173,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/bird-necklace.jpg" srcset="img/bird-necklace@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -168,7 +182,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/black-leather-choker-necklace.jpg" srcset="img/black-leather-choker-necklace@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -177,7 +191,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/purple-gemstone-necklace-desktop.jpg" srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -186,7 +200,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/elephant-earrings.jpg" srcset="img/elephant-earrings@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -195,7 +209,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/threader-necklace-closeup.jpg" srcset="img/threader-necklace-closeup@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -204,7 +218,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/origami-crane-necklace.jpg" srcset="img/origami-crane-necklace@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -213,7 +227,7 @@
             </a>
           </li>
           <li class="cat-goods__item">
-            <a href="" class="product-card">
+            <a href="#" class="product-card">
               <picture>
                 <img src="img/marble-earrings.jpg" srcset="img/marble-earrings@2x.jpg 2x" alt="" width="270" height="272">
               </picture>
@@ -222,6 +236,17 @@
             </a>
           </li>
         </ul>
+        <div class="cat-goods__pagination">
+          <a href="#" class="cat-goods__direction cat-goods__direction--prev">Previous</a>
+          <div class="cat-goods__pages">
+            <a href="#" class="cat-goods__page cat-goods__page--actual">1</a>
+            <a href="#" class="cat-goods__page">2</a>
+            <a href="#" class="cat-goods__page">3</a>
+            <a href="#" class="cat-goods__page">4</a>
+            <a href="#" class="cat-goods__page">5</a>
+          </div>
+          <a href="#" class="cat-goods__direction cat-goods__direction--next">Next</a>
+        </div>
       </article>
     </section>
     <footer class="footer">

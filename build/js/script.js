@@ -1,13 +1,13 @@
-const faqBtn = document.querySelectorAll('.faq__item');
-const faqAnswer = document.querySelectorAll('.faq__item p');
+const accArea = document.querySelectorAll('.accordion');
 
 
-faqBtn.forEach((btn, index) => {
-  btn.classList.add('faq__item--closed')
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('faq__item--closed');
+accArea.forEach((area) => {
+  area.classList.add('accordion--closed')
+  area.addEventListener('click', () => {
+    area.classList.toggle('accordion--closed');
   });
 });
+
 
 const menuBtn = document.querySelector('.header__btn');
 const header = document.querySelector('.header');
@@ -16,6 +16,24 @@ menuBtn.addEventListener('click', (evt) => {
   evt.preventDefault();
   header.classList.toggle('header--closed');
   header.classList.toggle('header--opened');
+});
+
+const filterMenu = document.querySelector('.cat-filter');
+const filterBtn = document.querySelector('.cat-filter__btn-open');
+const btnClose = document.querySelector('.cat-filter__btn-close');
+
+filterMenu.classList.add('cat-filter--closed');
+
+filterBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  filterMenu.classList.remove('cat-filter--closed');
+  body.classList.add('body-lock');
+
+  btnClose.addEventListener('click', () => {
+    evt.preventDefault();
+    filterMenu.classList.add('cat-filter--closed');
+    body.classList.remove('body-lock');
+  })
 });
 
 const popupLogin = document.querySelector('.login');
@@ -59,40 +77,42 @@ const popUpAction = (evt) => {
 };
 
 loginBtn.addEventListener('click', popUpAction);
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // direction: 'horisontal',
-  loop: true,
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 30,
-  
+if (document.querySelector('.main-slider')) {
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    // direction: 'horisontal',
+    loop: true,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 30,
+    
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 30,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
     },
-    1170: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-  },
-});
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+      },
+      1170: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+}
