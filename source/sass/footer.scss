@@ -1,20 +1,21 @@
 .footer {
   background-color: $deep-black;
   display: flex;
-  padding-left: 7.5%;
-  padding-right: 7.5%;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 85px;
+  padding-bottom: 95px;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 45px;
+    padding-top: 55px;
+    padding-bottom: 50px;
+    padding-left: 46px;
     padding-right: 150px;
+    row-gap: 45px;
   }
 
   @media (max-width: $mobile-width) {
@@ -30,8 +31,15 @@
   margin: 0;
   padding: 0;
   columns: 2;
-  column-gap: 67px;
-  margin-bottom: -30px;
+  column-gap: 76px;
+  margin-top: 5px;
+  margin-left: 35px;
+  margin-bottom: -22px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    column-gap: 87px;
+  }
 
   @media (max-width: $mobile-width) {
     columns: 1;
@@ -40,12 +48,16 @@
 }
 
 .footer__nav-item {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__nav-item:nth-child(4n) {
   @media (max-width: $mobile-width) {
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 }
 
@@ -56,6 +68,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $basic-white;
+  line-height: 130%;
   transition: color 200ms;
 }
 

@@ -1,5 +1,6 @@
 .main-slogan {
   margin-top: 19px;
+  width: 100%;
   min-height: 463px;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@
   font-family: $custom-font-garamond;
   font-size: 45px;
   font-weight: 700;
+  letter-spacing: 0.03em;
   color: $basic-white;
 
   @media (max-width: $mobile-width) {

@@ -1,5 +1,13 @@
 .main-slider {
-  margin-top: 130px;
+  margin-top: 125px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 65px;
+  }
 }
 
 .main-slider h2 {
@@ -10,9 +18,18 @@
 .main-slider p {
   width: max-content;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 27px;
   text-decoration: none;
   margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 22px;
+    margin-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .main-slider__slider {

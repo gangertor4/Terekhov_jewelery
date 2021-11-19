@@ -1,25 +1,29 @@
 .blog {
   padding-left: 98px;
   padding-right: 98px;
-  margin-top: 130px;
+  margin-top: 115px;
 
   @media (max-width: $tablet-width) {
     padding-left: 45px;
     padding-right: 45px;
-    margin-top: 80px;
+    margin-top: 65px;
   }
 
   @media (max-width: $mobile-width) {
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 70px;
+    margin-top: 58px;
   }
 }
 
 .blog p {
   width: fit-content;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 23px;
+  }
 }
 
 .blog__wrapper {
@@ -39,12 +43,14 @@
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    margin-top: 65px;
     max-width: 678px;
     gap: 50px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 316px;
+    margin-top: 0;
+    padding-top: 308px;
     gap: 296px;
   }
 }
@@ -52,12 +58,11 @@
 .blog__post {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 285px;
   height: 300px;
-  padding-top: 71px;
-  padding-bottom: 81px;
+  padding-top: 60px;
   box-sizing: border-box;
   background-color: $blog-bg;
 
@@ -68,6 +73,7 @@
 
   @media (max-width: $tablet-width) {
     width: 339px;
+    padding-top: 65px;
   }
 
   @media (max-width: $mobile-width) {
@@ -83,7 +89,11 @@
   font-size: 14px;
   font-weight: 500;
   color: $basic-grey;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .blog__post h3 {
@@ -94,7 +104,7 @@
   width: 163px;
   text-align: center;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .blog__post-link {
@@ -102,6 +112,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $basic-black;
+  line-height: 130%;
   text-decoration: none;
   width: fit-content;
   border-bottom: 1px solid $basic-brown;
@@ -213,7 +224,6 @@
     background-image: url("../img/alve-odonnell-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    // right: 0;
     left: 52%;
     bottom: 0;
     z-index: -15;
@@ -227,6 +237,7 @@
   @media (max-width: $tablet-width) {
     align-self: end;
     position: relative;
+    padding-top: 80px;
 
     &::before {
       width: 339px;
@@ -243,6 +254,7 @@
 
   @media (max-width: $mobile-width) {
     align-self: center;
+    padding-top: 60px;
 
     &::before {
       width: 290px;

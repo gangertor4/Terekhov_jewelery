@@ -1,10 +1,18 @@
+.mailing {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: -5px;
+}
+
 .mailing h2 {
   color: $basic-white;
+  line-height: 130%;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -14,10 +22,10 @@
   font-weight: 400;
   color: $basic-grey;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 33px;
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -28,12 +36,16 @@
 }
 
 .mailing input {
-  width: 397px;
-  height: 42px;
+  width: 390px;
+  height: 34px;
   outline: none;
   border: none;
   background-color: transparent;
   color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    width: 448px;
+  }
 
   @media (max-width: $mobile-width) {
     width: 58%;
@@ -56,6 +68,8 @@
   border: none;
   background-color: transparent;
   padding-right: 41px;
+  padding-top: 0;
+  margin-top: -2px;
   position: relative;
   cursor: pointer;
 
@@ -67,6 +81,6 @@
     background-image: url("../img/arrow-sign.svg");
     background-size: cover;
     right: 0;
-    top: 18px;
+    top: 12px;
   }
 }

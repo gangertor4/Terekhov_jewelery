@@ -7,14 +7,14 @@
   padding: 0;
   z-index: 1;
   max-width: 1170px;
-  height: 418px;
+  height: 428px;
 
   @media (max-width: 1169px) {
     width: 870px;
   }
 
   @media (max-width: $tablet-width) {
-    height: 468px;
+    height: 473px;
     width: 678px;
   }
 
@@ -110,10 +110,9 @@
 	border-radius: 0;
   padding: 7.5px 7.5px 0 7.5px;
 	width: auto;
-	height: 30px;
+	height: auto;
 	text-align: center;
 	line-height: 30px;
-	font-size: 12px;
 	color:$basic-grey;
 	opacity: 1;
   cursor: pointer;
@@ -125,7 +124,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: -95px;
+  top: -105px;
   margin: 0 auto;
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
@@ -136,7 +135,7 @@
   justify-content: stretch;
 
   @media (max-width: $tablet-width) {
-    top: -82px
+    top: -103px
   }
 
   @media (max-width: $mobile-width) {
@@ -155,8 +154,13 @@
   width: 29px;
   height: 9px;
   background-image: url("../img/arrow.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 15px;
+  }
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
@@ -170,6 +174,11 @@
   height: 9px;
   background-image: url("../img/arrow.svg");
   transform: rotate(180deg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 15px;
+  }
 }

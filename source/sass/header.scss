@@ -75,6 +75,7 @@
 .header label {
   grid-area: search;
   position: relative;
+  margin-top: 10px;
 
   &::before {
     content: "";
@@ -145,6 +146,7 @@
   width: 119px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .header__user a {
@@ -182,16 +184,17 @@
 .header__cart-icon {
   @media (max-width: $tablet-width) {
     position: absolute;
-    width: 18px;
-    height: 16px;
-    background-size: contain;
+    width: 20px;
+    height: 18px;
+    background-size: cover;
     left: 92%;
     top: 55px;
     background-image: url("../img/cart.svg");  
   }
 
   @media (max-width: $mobile-width) {
-    top: 38px;
+    top: 37px;
+    left: 90%;
   }
 }
 
