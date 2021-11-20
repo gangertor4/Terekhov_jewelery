@@ -8,38 +8,37 @@
     "search logo user"
     "nav nav nav";
 
-    @media (max-width: $tablet-width) {
-      margin: 0;
-      padding-top: 30px;
-      padding-left: 45px;
-      padding-right: 45px;
-      min-height: 126px;
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+    min-height: 126px;
 
-      &--closed {
-        display: flex;
-        box-sizing: border-box;
-      }
-
-      &--opened {
-        display: flex;
-        flex-direction: column;
-        min-height: 750px;
-        background-color: $basic-brown;}
+    &--closed {
+      display: flex;
+      box-sizing: border-box;
     }
 
-    @media (max-width: $mobile-width) {
-      padding-top: 20px;
-      padding-left: 15px;
-      padding-right: 15px;
-      min-height: 92px;
-
-      &--opened {
-        min-height: 665px;
-      }
+    &--opened {
+      display: flex;
+      flex-direction: column;
+      min-height: 750px;
+      background-color: $basic-brown;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 92px;
+
+    &--opened {
+      min-height: 665px;
+    }
+  }
 }
-
-
 
 .header__btn {
   display: none;
@@ -101,7 +100,6 @@
     font-family: $custom-font-poppins;
     font-size: 14px;
     color: $basic-grey;
-
   }
 
   @media (max-width: $tablet-width) {
@@ -159,7 +157,7 @@
   font-weight: 500;
   color: $basic-black;
   text-decoration: none;
-  
+
   @media (max-width: $tablet-width) {
     font-size: 18px;
     color: $basic-white;
@@ -193,7 +191,7 @@
     background-size: cover;
     left: 92%;
     top: 55px;
-    background-image: url("../img/cart.svg");  
+    background-image: url("../img/cart.svg");
   }
 
   @media (max-width: $mobile-width) {
@@ -301,7 +299,7 @@
   @media (max-width: $tablet-width) {
     display: block;
     margin-top: 50px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
   }
 
   @media (max-width: $mobile-width) {

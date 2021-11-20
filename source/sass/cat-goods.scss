@@ -37,7 +37,7 @@
 .cat-goods__item img {
   width: 100%;
   height: auto;
-  
+
   @media (max-width: $mobile-width) {
     width: 130px;
   }
@@ -54,22 +54,23 @@
   }
 }
 
-.cat-goods__pagination a{
+.cat-goods__pagination a {
   text-decoration: none;
   font-family: $custom-font-poppins;
   font-size: 16px;
   font-weight: 500;
 }
- .cat-goods__direction {
-   &--prev,
-   &--next {
-     color: $basic-black;
-   }
 
-   @media (max-width: $mobile-width) {
-     display: none;
-   }
- }
+.cat-goods__direction {
+  &--prev,
+  &--next {
+    color: $basic-black;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
 
 .cat-goods__pages {
   width: 96px;

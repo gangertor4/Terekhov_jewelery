@@ -10,7 +10,7 @@
   background-size: contain;
 
   @media (min-resolution: 144dpi),
-  (min-resolution: 1.5dppx) {
+    (min-resolution: 1.5dppx) {
     background-image: url("../img/sweet-ice-cream-photography@2x.jpg");
   }
 
@@ -84,7 +84,7 @@
   }
 }
 
-.login input[type=email] {
+.login input[type="email"] {
   margin-bottom: 34px;
 }
 
@@ -159,8 +159,8 @@
   right: 20px;
 }
 
-.login__exit:before,
-.login__exit:after {
+.login__exit::before,
+.login__exit::after {
   content: "";
   position: absolute;
   height: 15px;
@@ -169,10 +169,10 @@
   top: 0;
 }
 
-.login__exit:before {
+.login__exit::before {
   transform: rotate(45deg);
 }
 
-.login__exit:after {
+.login__exit::after {
   transform: rotate(-45deg);
 }

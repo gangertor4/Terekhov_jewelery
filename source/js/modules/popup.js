@@ -3,9 +3,8 @@ const closePopupBtn = popupLogin.querySelector('.login__exit');
 const loginBtn = document.querySelector('.header__login');
 const popupEmail = popupLogin.querySelector('#login-email');
 const disabler = document.querySelector('.disabler');
-const body = document.querySelector('body');
 
-const isEscEvent = (evt) => {
+const isEscEvent = function (evt) {
   return evt.key === ('Escape' || 'Esc');
 };
 

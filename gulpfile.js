@@ -104,7 +104,7 @@ const copyMap = (done) => {
     })
     .pipe(rename({
       dirname: "",
-      })) 
+      }))
     .pipe(gulp.dest("build/js"))
   done();
 }

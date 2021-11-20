@@ -41,11 +41,12 @@
 
 .swiper-android .swiper-slide,
 .swiper-wrapper {
-  transform: translate3d(0px, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .swiper-pointer-events {
   touch-action: pan-y;
+
   &.swiper-vertical {
     touch-action: pan-x;
   }
@@ -87,6 +88,7 @@
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
+
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
 }
@@ -107,18 +109,19 @@
   font-family: $custom-font-poppins;
   font-size: 16px;
   font-weight: 500;
-	border-radius: 0;
+  border-radius: 0;
   padding: 7.5px 7.5px 0 7.5px;
-	width: auto;
-	height: auto;
-	text-align: center;
-	line-height: 30px;
-	color:$basic-grey;
-	opacity: 1;
+  width: auto;
+  height: auto;
+  text-align: center;
+  line-height: 30px;
+  color: $basic-grey;
+  opacity: 1;
   cursor: pointer;
 }
+
 .swiper-pagination-bullet-active {
-	color:$basic-black
+  color: $basic-black;
 }
 
 .swiper-button-prev,
@@ -135,7 +138,7 @@
   justify-content: stretch;
 
   @media (max-width: $tablet-width) {
-    top: -103px
+    top: -103px;
   }
 
   @media (max-width: $mobile-width) {
@@ -148,8 +151,9 @@
   left: 0;
   right: auto;
 }
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
   content: "";
   width: 29px;
   height: 9px;
@@ -162,13 +166,15 @@
     height: 15px;
   }
 }
+
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
   right: 0;
   left: auto;
 }
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
+
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
   content: "";
   width: 29px;
   height: 9px;

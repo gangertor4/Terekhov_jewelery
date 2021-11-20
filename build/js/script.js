@@ -2,12 +2,11 @@ const accArea = document.querySelectorAll('.accordion');
 
 
 accArea.forEach((area) => {
-  area.classList.add('accordion--closed')
+  area.classList.add('accordion--closed');
   area.addEventListener('click', () => {
     area.classList.toggle('accordion--closed');
   });
 });
-
 
 const menuBtn = document.querySelector('.header__btn');
 const header = document.querySelector('.header');
@@ -21,33 +20,33 @@ menuBtn.addEventListener('click', (evt) => {
 const filterMenu = document.querySelector('.cat-filter');
 const filterBtn = document.querySelector('.cat-filter__btn-open');
 const btnClose = document.querySelector('.cat-filter__btn-close');
+const body = document.querySelector('body');
 
 if (filterMenu) {
   filterMenu.classList.add('cat-filter--closed');
-};
+}
 
 if (filterBtn) {
   filterBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
     filterMenu.classList.remove('cat-filter--closed');
     body.classList.add('body-lock');
-  
+
     btnClose.addEventListener('click', () => {
       evt.preventDefault();
       filterMenu.classList.add('cat-filter--closed');
       body.classList.remove('body-lock');
-    })
+    });
   });
-};
+}
 
 const popupLogin = document.querySelector('.login');
 const closePopupBtn = popupLogin.querySelector('.login__exit');
 const loginBtn = document.querySelector('.header__login');
 const popupEmail = popupLogin.querySelector('#login-email');
 const disabler = document.querySelector('.disabler');
-const body = document.querySelector('body');
 
-const isEscEvent = (evt) => {
+const isEscEvent = function (evt) {
   return evt.key === ('Escape' || 'Esc');
 };
 
@@ -79,15 +78,16 @@ const popUpAction = (evt) => {
 };
 
 loginBtn.addEventListener('click', popUpAction);
+
 if (document.querySelector('.main-slider')) {
-    const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper', {
     // Optional parameters
     // direction: 'horisontal',
     loop: true,
     slidesPerView: 2,
     slidesPerGroup: 2,
     spaceBetween: 30,
-    
+
 
     // If we need pagination
     pagination: {
@@ -95,7 +95,7 @@ if (document.querySelector('.main-slider')) {
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
+      }
     },
 
     // Navigation arrows
