@@ -21,10 +21,6 @@
     min-height: 68px;
     margin: 0 auto;
   }
-
-  @media (max-width: $mobile-width) {
-    // width: calc(100% - 30px);
-  }
 }
 
 .cat-filter--closed *:not(.cat-filter__btn-open) {
@@ -45,10 +41,11 @@
     margin: auto;
     z-index: 10;
     overflow-y: scroll;
+    padding-top: 15px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 76px;
+    padding-top: 78px;
   }
 }
 
@@ -98,17 +95,17 @@
     width: 460px;
     border: none;
     border-bottom: 1px solid $basic-brown;
-    padding: 40px 0 40px 42px;
+    padding: 32px 0 32px 42px;
 
     &::after {
       top: 40px;
-      right: 42px;
+      right: 43px;
     }
   }
 
   @media (max-width: $mobile-width) {
     width: 270px;
-    padding: 30px 0 30px 20px;
+    padding: 20px 0 22px 20px;
     margin: 0 auto;
   }
 }
@@ -135,6 +132,7 @@
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
+    padding-left: 40px;
   }
 }
 
@@ -144,10 +142,18 @@
 
 .cat-filter__group label:first-of-type {
   margin-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 21px;
+  }
 }
 
 .cat-filter__group label:not(:last-child) {
   margin-bottom: 10px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .cat-filter__group label:last-child {
@@ -163,6 +169,11 @@
   outline: 1px solid $basic-brown;
   left: 8px;
   top: 5%;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .cat-filter__group input[type="checkbox"]:checked + span::before {
@@ -209,18 +220,36 @@
     width: 317px;
     background-image: linear-gradient(to right, #f0eae4 18%, #a87b62 18%, #a87b62 75%, #f0eae4 75%);
     margin-left: 10px;
+    margin-top: 30px;
+
+    &::before,
+    &::after {
+      width: 18px;
+      height: 18px;
+    }
 
     &::before {
-      left: 47px;
+      left: 48px;
     }
 
     &::after {
-      right: 68px;
+      right: 70px;
     }
   }
 
   @media (max-width: $mobile-width) {
     width: 250px;
+    background-image: linear-gradient(to right, #f0eae4 12%, #a87b62 12%, #a87b62 74%, #f0eae4 74%);
+    margin-left: 0;
+    margin-top: 32px;
+
+    &::before {
+      left: 30px;
+    }
+
+    &::after {
+      right: 65px;
+    }
   }
 }
 
@@ -232,6 +261,12 @@
 
   @media (max-width: $tablet-width) {
     width: 220px;
+    margin-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 20px;
+    width: 180px;
   }
 }
 
@@ -285,6 +320,10 @@
     width: 377px;
     text-align: center;
     margin-left: 42px;
+
+    &--submit {
+      margin-top: 41px;
+    }
   }
 
   @media (max-width: $mobile-width) {
