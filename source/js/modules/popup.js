@@ -11,6 +11,7 @@ const isEscEvent = function (evt) {
 const closePopUp = (modal) => {
   modal.classList.add('visually-hidden');
   disabler.classList.add('visually-hidden');
+  body.classList.remove('body-lock');
 };
 
 const onPopUpEscKeydown = (evt) => {
@@ -24,6 +25,7 @@ const popUpAction = (evt) => {
   evt.preventDefault();
   popupLogin.classList.remove('visually-hidden');
   disabler.classList.remove('visually-hidden');
+  body.classList.add('body-lock');
   popupEmail.focus();
   document.addEventListener('keydown', onPopUpEscKeydown);
   closePopupBtn.addEventListener('click', () => {
@@ -35,4 +37,6 @@ const popUpAction = (evt) => {
   });
 };
 
-loginBtn.addEventListener('click', popUpAction);
+if (loginBtn) {
+  loginBtn.addEventListener('click', popUpAction);
+}

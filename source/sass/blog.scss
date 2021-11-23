@@ -118,6 +118,11 @@
   border-bottom: 1px solid $basic-brown;
 }
 
+.blog__post-link:hover,
+.blog__post-link:focus {
+  border-bottom-style: dashed;
+}
+
 .blog__post--care {
   grid-area: care;
   justify-self: end;

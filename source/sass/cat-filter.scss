@@ -301,7 +301,8 @@
     margin-top: 30px;
   }
 
-  &--submit:hover {
+  &--submit:hover,
+  &--submit:focus {
     background-color: #86624e;
   }
 
@@ -312,7 +313,8 @@
     margin-top: 25px;
   }
 
-  &--reset:hover {
+  &--reset:hover,
+  &--reset:focus {
     color: $basic-grey;
   }
 

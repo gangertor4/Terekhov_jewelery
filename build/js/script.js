@@ -1,21 +1,24 @@
 const accArea = document.querySelectorAll('.accordion');
 
-
-accArea.forEach((area) => {
-  area.classList.add('accordion--closed');
-  area.addEventListener('click', () => {
-    area.classList.toggle('accordion--closed');
+if(accArea) {
+  accArea.forEach((area) => {
+    area.classList.add('accordion--closed');
+    area.addEventListener('click', () => {
+      area.classList.toggle('accordion--closed');
+    });
   });
-});
+}
 
 const menuBtn = document.querySelector('.header__btn');
 const header = document.querySelector('.header');
 
-menuBtn.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  header.classList.toggle('header--closed');
-  header.classList.toggle('header--opened');
-});
+if (menuBtn) {
+  menuBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    header.classList.toggle('header--closed');
+    header.classList.toggle('header--opened');
+  });
+}
 
 const filterMenu = document.querySelector('.cat-filter');
 const filterBtn = document.querySelector('.cat-filter__btn-open');
@@ -53,6 +56,7 @@ const isEscEvent = function (evt) {
 const closePopUp = (modal) => {
   modal.classList.add('visually-hidden');
   disabler.classList.add('visually-hidden');
+  body.classList.remove('body-lock');
 };
 
 const onPopUpEscKeydown = (evt) => {
@@ -66,6 +70,7 @@ const popUpAction = (evt) => {
   evt.preventDefault();
   popupLogin.classList.remove('visually-hidden');
   disabler.classList.remove('visually-hidden');
+  body.classList.add('body-lock');
   popupEmail.focus();
   document.addEventListener('keydown', onPopUpEscKeydown);
   closePopupBtn.addEventListener('click', () => {
@@ -77,7 +82,9 @@ const popUpAction = (evt) => {
   });
 };
 
-loginBtn.addEventListener('click', popUpAction);
+if (loginBtn) {
+  loginBtn.addEventListener('click', popUpAction);
+}
 
 if (document.querySelector('.main-slider')) {
   const swiper = new Swiper('.swiper', {

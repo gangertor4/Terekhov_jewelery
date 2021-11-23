@@ -11,7 +11,7 @@ const sourcemap = require("gulp-sourcemaps");
 const csso = require("postcss-csso");
 const del = require("del");
 const imagemin = require("gulp-imagemin");
-const svgsprite = require("gulp-svg-sprite");
+const webp = require("gulp-webp");
 
 //sass to css
 
@@ -69,19 +69,16 @@ const images = () => {
 
 exports.images = images;
 
-const sprite = () => {
-  return gulp.src("source/img/*.svg")
-  .pipe(svgsprite({
-    mode: {
-      stack: {
-        sprite: "../sprite.svg"
-      }
-    },
-  }))
-  .pipe(gulp.dest("build/img"));
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("build/img"))
 }
 
-exports.sprite = sprite;
+exports.createWebp = createWebp;
+
 
 const copy = (done) => {
   gulp.src([
@@ -174,7 +171,6 @@ const build = gulp.series(
   ),
   gulp.series(
     images,
-    sprite,
   ));
 
 exports.build = build;
@@ -189,10 +185,10 @@ exports.default = gulp.series(
     copyMap,
     concatJsript,
     concatJsvendor,
+    createWebp,
+    images,
   ),
   gulp.series(
-    images,
-    sprite,
     server,
     watcher,
   ));

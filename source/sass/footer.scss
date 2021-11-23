@@ -1,8 +1,10 @@
 .footer {
   background-color: $deep-black;
   display: flex;
-  padding-left: 7%;
-  padding-right: 7%;
+  // padding-left: 7%;
+  // padding-right: 7%;
+  max-width: 1170px;
+  margin: 0 auto;
   padding-top: 85px;
   padding-bottom: 95px;
   align-items: center;

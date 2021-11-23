@@ -72,15 +72,26 @@
   margin-top: -2px;
   position: relative;
   cursor: pointer;
+  transition: color 200ms;
 
   &::after {
     content: "";
     position: absolute;
     width: 29px;
-    height: 9px;
+    height: 11px;
     background-image: url("../img/arrow-sign.svg");
-    background-size: cover;
+    background-size: contain;
     right: 0;
     top: 12px;
+    transition: transform 200ms;
+  }
+}
+
+.mailing__btn:hover,
+.mailing__btn:focus {
+  color: $basic-grey;
+
+  &::after {
+    transform: scale(0.9    );
   }
 }
