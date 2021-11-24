@@ -1,17 +1,19 @@
 .main-nav {
-  margin: 0 auto;
-  width: 493px;
+  width: 100%;
+  padding-top: 18px;
+  border-top: 1px solid $header-border;
 
   @media (max-width: $tablet-width) {
     width: 100%;
+    border-top: none;
   }
 }
 
 .main-nav__list {
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-left: 5px;
+  margin: 0 auto;
+  // margin-left: 5px;
   width: 493px;
   display: flex;
   justify-content: space-between;
@@ -50,6 +52,7 @@
   }
 }
 
-.main-nav__item a:hover {
+.main-nav__item a:hover,
+.main-nav__item a:focus {
   border-color: $basic-brown;
 }

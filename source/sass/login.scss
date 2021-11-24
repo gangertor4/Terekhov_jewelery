@@ -1,7 +1,7 @@
 .login {
   padding-top: 194px;
   width: 430px;
-  height: 586px;
+  min-height: 586px;
   box-sizing: border-box;
   margin: 0 auto;
   display: flex;
@@ -20,12 +20,13 @@
 
   &--popup {
     position: fixed;
-    top: 100px;
+    top: 50%;
     right: 0;
-    bottom: 50px;
     left: 0;
     margin: auto;
     z-index: 100;
+    transform: translateY(-50%);
+    overflow-y: scroll;
   }
 
   @media (max-width: $mobile-width) {
