@@ -17,9 +17,13 @@
     color: $basic-white;
     text-decoration: none;
     background-color: $basic-brown;
-    width: 100%;
+    width: calc(100% - 90px);
     min-height: 68px;
     margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: calc(100% - 30px);
   }
 }
 
@@ -138,6 +142,7 @@
 
 .cat-filter__group label {
   cursor: pointer;
+  width: fit-content;
 }
 
 .cat-filter__group label:first-of-type {
@@ -158,6 +163,11 @@
 
 .cat-filter__group label:last-child {
   margin-bottom: 4px;
+}
+
+.cat-filter__group span:hover,
+.cat-filter__group span:focus {
+  color: $basic-grey;
 }
 
 .cat-filter__group input[type="checkbox"] + span::before {

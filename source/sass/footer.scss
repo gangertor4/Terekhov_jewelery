@@ -1,13 +1,15 @@
 .footer {
+  width: 100%;
   background-color: $deep-black;
+}
+
+.footer__wrapper {
   display: flex;
-  padding-left: 7%;
-  padding-right: 7%;
-  // max-width: 1170px;
-  // margin: 0 auto;
+  max-width: 1170px;
+  margin: 0 auto;
   padding-top: 85px;
   padding-bottom: 95px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;

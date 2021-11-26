@@ -6,5 +6,6 @@ if (menuBtn) {
     evt.preventDefault();
     header.classList.toggle('header--closed');
     header.classList.toggle('header--opened');
+    body.classList.toggle('body-lock');
   });
 }

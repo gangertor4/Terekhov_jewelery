@@ -13,10 +13,10 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  // margin-left: 5px;
   width: 493px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;

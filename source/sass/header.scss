@@ -10,6 +10,7 @@
     padding-right: 45px;
     min-height: 126px;
 
+
     &--closed {
       display: flex;
       box-sizing: border-box;
@@ -17,6 +18,7 @@
 
     &--opened {
       display: flex;
+      overflow-y: auto;
       flex-direction: column;
       min-height: 750px;
       background-color: $basic-brown;
@@ -86,6 +88,7 @@
   grid-area: search;
   position: relative;
   margin-top: 10px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -106,6 +109,7 @@
   border: none;
   outline: none;
   padding-left: 29px;
+  cursor: pointer;
 
   &::placeholder {
     font-family: $custom-font-poppins;
@@ -158,6 +162,7 @@
 .header__user {
   width: 119px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
   margin-top: 12px;
@@ -188,9 +193,10 @@
 }
 
 .header__cart {
-  margin-left: auto;
+  margin-left: 35px;
 }
 
+.header__login,
 .header__cart span {
   @media (max-width: $tablet-width) {
     display: none;

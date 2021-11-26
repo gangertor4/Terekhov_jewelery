@@ -1,6 +1,7 @@
 const popupLogin = document.querySelector('.login');
 const closePopupBtn = popupLogin.querySelector('.login__exit');
 const loginBtn = document.querySelector('.header__login');
+const loginBtnBurger = document.querySelector('.header__login-burger');
 const popupEmail = popupLogin.querySelector('#login-email');
 const disabler = document.querySelector('.disabler');
 
@@ -39,4 +40,8 @@ const popUpAction = (evt) => {
 
 if (loginBtn) {
   loginBtn.addEventListener('click', popUpAction);
+}
+
+if (loginBtnBurger) {
+  loginBtnBurger.addEventListener('click', popUpAction);
 }
