@@ -30,7 +30,7 @@
   @media (max-width: $mobile-width) {
     width: calc(100vw - 30px);
     grid-template-columns: repeat(auto-fill, 130px);
-    row-gap: 26px;
+    row-gap: 22px;
     justify-content: center;
   }
 }

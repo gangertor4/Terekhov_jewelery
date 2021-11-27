@@ -41,6 +41,7 @@
 (() => {
   if (document.querySelector(`.main-slider`)) {
     const slider = new Swiper(`.swiper`, {
+      loop: true,
       navigation: {
         nextEl: `.swiper-button-next`,
         prevEl: `.swiper-button-prev`,
@@ -50,8 +51,8 @@
         renderBullet(index, bulletClass) {
           return `<button class="` + bulletClass + `"type="button">` + (index + 1) + `</button>`;
         },
-        bulletClass: `pagination__list-item`,
-        bulletActiveClass: `pagination__current-page`,
+        bulletClass: `swiper-pagination-bullet`,
+        bulletActiveClass: `swiper-pagination-bullet-active`,
         clickable: true,
       },
       breakpoints: {
@@ -91,7 +92,7 @@
         enabled: true,
         onlyInViewport: true,
       },
-      autoHeight: true,
+      // autoHeight: true,
       watchSlidesVisibility: true,
     });
 

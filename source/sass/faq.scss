@@ -32,7 +32,6 @@
   box-sizing: border-box;
   border: 1px solid $faq-border;
   border-bottom: none;
-  cursor: pointer;
   position: relative;
 
   &::after {
@@ -74,6 +73,7 @@
   font-weight: 500;
   line-height: 130%;
   margin: 0;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     font-size: 16px;

@@ -52,6 +52,7 @@ const loginBtnBurger = document.querySelector('.header__login-burger');
 const popupEmail = popupLogin.querySelector('#login-email');
 const disabler = document.querySelector('.disabler');
 
+
 const isEscEvent = function (evt) {
   return evt.key === ('Escape' || 'Esc');
 };
@@ -83,6 +84,36 @@ const popUpAction = (evt) => {
   disabler.addEventListener('click', () => {
     closePopUp(popupLogin);
   });
+
+  const  focusableElements =
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  const firstFocusableElement = popupLogin.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+  const focusableContent = popupLogin.querySelectorAll(focusableElements);
+  const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+
+  document.addEventListener('keydown', function(e) {
+    let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (e.shiftKey) { // if shift key pressed for shift + tab combination
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus(); // add focus for the last focusable element
+        e.preventDefault();
+      }
+    } else { // if tab key is pressed
+      if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+        firstFocusableElement.focus(); // add focus for the first focusable element
+        e.preventDefault();
+      }
+    }
+  });
+
+  firstFocusableElement.focus();
 };
 
 if (loginBtn) {
@@ -136,6 +167,7 @@ if (loginBtnBurger) {
 (() => {
   if (document.querySelector(`.main-slider`)) {
     const slider = new Swiper(`.swiper`, {
+      loop: true,
       navigation: {
         nextEl: `.swiper-button-next`,
         prevEl: `.swiper-button-prev`,
@@ -145,8 +177,8 @@ if (loginBtnBurger) {
         renderBullet(index, bulletClass) {
           return `<button class="` + bulletClass + `"type="button">` + (index + 1) + `</button>`;
         },
-        bulletClass: `pagination__list-item`,
-        bulletActiveClass: `pagination__current-page`,
+        bulletClass: `swiper-pagination-bullet`,
+        bulletActiveClass: `swiper-pagination-bullet-active`,
         clickable: true,
       },
       breakpoints: {
@@ -186,7 +218,7 @@ if (loginBtnBurger) {
         enabled: true,
         onlyInViewport: true,
       },
-      autoHeight: true,
+      // autoHeight: true,
       watchSlidesVisibility: true,
     });
 

@@ -10,16 +10,13 @@
     padding-right: 45px;
     min-height: 126px;
 
-
     &--closed {
       display: flex;
       box-sizing: border-box;
     }
 
     &--opened {
-      display: flex;
       overflow-y: auto;
-      flex-direction: column;
       min-height: 750px;
       background-color: $basic-brown;
     }
@@ -81,6 +78,7 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 18px;
+    margin-left: -15px;
   }
 }
 
@@ -110,6 +108,7 @@
   outline: none;
   padding-left: 29px;
   cursor: pointer;
+  margin-top: 12px;
 
   &::placeholder {
     font-family: $custom-font-poppins;
@@ -154,6 +153,13 @@
 
   @media (max-width: $mobile-width) {
     top: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.header__logo svg {
+  @media (max-width: $mobile-width) {
     width: 52px;
     height: 52px;
   }
@@ -286,17 +292,13 @@
 
     &::before {
       background-image: url("../img/search-white.svg");
-      top: 12px;
+      top: 50%;
       left: 12px;
     }
   }
 
   @media (max-width: $mobile-width) {
     margin-top: 30px;
-
-    &::before {
-      top: 30px;
-    }
   }
 }
 
