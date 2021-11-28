@@ -111,6 +111,11 @@
     width: 270px;
     padding: 20px 0 22px 20px;
     margin: 0 auto;
+
+    &::after {
+      top: 29px;
+      right: 20px;
+    }
   }
 }
 

@@ -36,8 +36,13 @@
   letter-spacing: 0.03em;
   color: $basic-white;
 
+  @media (max-width: $tablet-width) {
+    padding-right: 15px;
+  }
+
   @media (max-width: $mobile-width) {
     font-size: 38px;
+    padding-right: 0;
   }
 }
 
@@ -49,7 +54,12 @@
   color: $basic-white;
   margin: 0;
 
+  @media (max-width: $tablet-width) {
+    padding-right: 16px;
+  }
+
   @media (max-width: $mobile-width) {
     font-size: 34px;
+    padding-right: 0;
   }
 }
