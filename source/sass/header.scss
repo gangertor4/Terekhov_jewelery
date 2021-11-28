@@ -8,16 +8,16 @@
     padding-top: 30px;
     padding-left: 45px;
     padding-right: 45px;
-    min-height: 126px;
+
 
     &--closed {
       display: flex;
       box-sizing: border-box;
+      min-height: 126px;
     }
 
     &--opened {
-      overflow-y: auto;
-      min-height: 750px;
+      height: 100vh;
       background-color: $basic-brown;
     }
   }
@@ -27,10 +27,6 @@
     padding-left: 15px;
     padding-right: 15px;
     min-height: 92px;
-
-    &--opened {
-      min-height: 665px;
-    }
   }
 }
 
@@ -319,6 +315,13 @@
 .header--opened .header__cart-icon {
   @media (max-width: $tablet-width) {
     background-image: url("../img/cart-white.svg");
+  }
+}
+
+.header--opened .header__wrapper-burger {
+  @media (max-width: $tablet-width) {
+    overflow: auto;
+    padding-bottom: 40px;
   }
 }
 
