@@ -351,10 +351,10 @@
 .header--opened .header__login-burger {
   @media (max-width: $tablet-width) {
     display: block;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: 12px;
+    margin-top: 35px;
   }
 }

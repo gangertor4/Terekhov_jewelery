@@ -61,7 +61,7 @@
   justify-content: start;
   align-items: center;
   width: 285px;
-  height: 300px;
+  min-height: 300px;
   padding-top: 60px;
   box-sizing: border-box;
   background-color: $blog-bg;
