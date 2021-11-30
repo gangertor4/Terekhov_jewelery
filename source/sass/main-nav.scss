@@ -16,7 +16,7 @@
   margin: 0 auto;
   width: 493px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
@@ -34,6 +34,10 @@
   @media (max-width: $mobile-width) {
     margin-bottom: 33px;
   }
+}
+
+.main-nav__item:not(:nth-child(5n)) {
+  margin-right: 35px;
 }
 
 .main-nav__item a {

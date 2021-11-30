@@ -18,7 +18,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 250px;
+    min-width: 250px;
     line-height: 130%;
     text-align: center;
     margin-bottom: 29px;
@@ -51,7 +51,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 290px;
+    width: calc(100% - 30px);
     padding: 15px 0 24px 25px;
 
     &::after {
@@ -77,7 +77,8 @@
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
-    width: 201px;
+    margin-right: 0;
+    padding-right: 60px;
   }
 }
 
