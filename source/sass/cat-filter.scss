@@ -20,10 +20,12 @@
     width: calc(100% - 90px);
     min-height: 68px;
     margin: 0 auto;
+    margin-bottom: 50px;
   }
 
   @media (max-width: $mobile-width) {
     width: calc(100% - 30px);
+    margin-bottom: 40px;
   }
 }
 
@@ -34,6 +36,7 @@
 }
 
 .cat-filter form {
+  margin-right: 50px;
   @media (max-width: $tablet-width) {
     background-color: $basic-white;
     width: 100%;

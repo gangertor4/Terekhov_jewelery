@@ -4,17 +4,17 @@
   margin: 0 auto;
   margin-top: 80px;
   padding: 0 20px 0 20px;
-  column-gap: 50px;
+  // column-gap: 50px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
     margin-top: 50px;
-    row-gap: 50px;
+    // row-gap: 50px;
     padding: 0;
   }
 
   @media (max-width: $mobile-width) {
     margin-top: 40px;
-    row-gap: 40px;
+    // row-gap: 40px;
   }
 }
