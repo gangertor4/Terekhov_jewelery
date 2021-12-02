@@ -82,55 +82,55 @@
           <a href="#" class="cat-filter__btn-open">Filter</a>
           <form action="https://echo.htmlacademy.ru" method="post">
             <button type="button" class="cat-filter__btn-close"></button>
-            <fieldset class="cat-filter__group cat-filter__group--product accordion">
-              <h3>Product</h3>
-              <label for="necklace" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="necklace" id="necklace" checked tabindex="-1">
+            <details class="cat-filter__group cat-filter__group--product accordion">
+              <summary>Product</summary>
+              <label for="necklace">
+                <input type="checkbox" class="visually-hidden" class="visually-hidden" name="necklace" id="necklace" checked>
                 <span>Necklaces</span>
               </label>
-              <label for="choker" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="choker" id="choker" checked tabindex="-1">
+              <label for="choker">
+                <input type="checkbox" class="visually-hidden" name="choker" id="choker" checked>
                 <span>Chokers</span>
               </label>
-              <label for="rings" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="rings" id="rings" tabindex="-1">
+              <label for="rings">
+                <input type="checkbox" class="visually-hidden" name="rings" id="rings">
                 <span>Rings</span>
               </label>
-              <label for="earrings" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" checked tabindex="-1">
+              <label for="earrings">
+                <input type="checkbox" class="visually-hidden" name="earrings" id="earrings" checked>
                 <span>Earrings</span>
               </label>
-            </fieldset>
-            <fieldset class="cat-filter__group cat-filter__group--material accordion">
-              <h3>Material</h3>
-              <label for="gold" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked tabindex="-1">
+            </details>
+            <details class="cat-filter__group cat-filter__group--material accordion">
+              <summary>Material</summary>
+              <label for="gold">
+                <input type="checkbox" class="visually-hidden" name="gold" id="gold" checked>
                 <span>Gold</span>
               </label>
-              <label for="silver" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="silver" id="silver" tabindex="-1">
+              <label for="silver">
+                <input type="checkbox" class="visually-hidden" name="silver" id="silver">
                 <span>Silver</span>
               </label>
-            </fieldset>
-            <fieldset class="cat-filter__group cat-filter__group--collection accordion">
-              <h3>Collection</h3>
-              <label for="flamingo" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="flamingo" id="flamingo" tabindex="-1">
+            </details>
+            <details class="cat-filter__group cat-filter__group--collection accordion">
+              <summary>Collection</summary>
+              <label for="flamingo">
+                <input type="checkbox" class="visually-hidden" name="flamingo" id="flamingo">
                 <span>Pink flamingo</span>
               </label>
-              <label for="dream" tabindex="0">
-                <input class="visually-hidden" type="checkbox" name="dream" id="dream" checked tabindex="-1">
+              <label for="dream">
+                <input type="checkbox" class="visually-hidden" name="dream" id="dream" checked>
                 <span>Dreams</span>
               </label>
-            </fieldset>
-            <fieldset class="cat-filter__group cat-filter__group--price accordion">
-              <h3>Price</h3>
+            </details>
+            <details class="cat-filter__group cat-filter__group--price accordion">
+              <summary>Price</summary>
               <div class="cat-filter__price-change"></div>
               <div class="cat-filter__price-numbers">
                 <p>$ 55</p>
                 <p>$ 155</p>
               </div>
-            </fieldset>
+            </details>
             <button type="button" class="cat-filter__btn cat-filter__btn--submit">Apply</button>
             <button type="reset" class="cat-filter__btn cat-filter__btn--reset">Clear All</button>
           </form>

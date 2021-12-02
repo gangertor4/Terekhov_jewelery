@@ -93,10 +93,10 @@
 
   position: relative;
 
-  &::after {
-    top: 30px;
-    right: 25px;
-  }
+  // &::after {
+  //   top: 30px;
+  //   right: 25px;
+  // }
 
   @media (max-width: $tablet-width) {
     width: 460px;
@@ -104,10 +104,10 @@
     border-bottom: 1px solid $basic-brown;
     padding: 32px 0 32px 42px;
 
-    &::after {
-      top: 40px;
-      right: 43px;
-    }
+    // &::after {
+    //   top: 40px;
+    //   right: 43px;
+    // }
   }
 
   @media (max-width: $mobile-width) {
@@ -115,23 +115,67 @@
     padding: 20px 0 22px 20px;
     margin: 0 auto;
 
-    &::after {
-      top: 29px;
-      right: 20px;
-    }
+    // &::after {
+    //   top: 29px;
+    //   right: 20px;
+    // }
   }
 }
 
-.cat-filter__group h3 {
+.cat-filter__group summary {
   font-family: $custom-font-poppins;
   font-size: 16px;
   font-weight: 500;
   color: $basic-black;
   margin: 0;
   cursor: pointer;
+  position: relative;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::-moz-list-bullet {
+    list-style-type: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 24px;
+    z-index: 1;
+
+    width: 16px;
+    height: 9px;
+
+    background-image: url("../img/arrow-accord.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    @media (max-width: $tablet-width) {
+      width: 23px;
+      height: 12px;
+      top: 8px;
+      right: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 8px;
+      right: 18px;
+    }
+  }
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
+  }
+}
+
+.cat-filter__group[open] summary {
+  &::after {
+    transform: rotate(180deg);
   }
 }
 
@@ -175,9 +219,14 @@
 }
 
 .cat-filter__group span:hover,
-.cat-filter__group span:focus {
+.cat-filter__group input[type="checkbox"]:focus + span {
   color: $basic-grey;
 }
+
+// .cat-filter__group input[type="checkbox"] {
+//   opacity: 0;
+//   position: absolute;
+// }
 
 .cat-filter__group input[type="checkbox"] + span::before {
   content: "";
